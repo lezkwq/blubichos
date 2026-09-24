@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Blubichos | Consultório Veterinário na Itoupava Central, Blumenau</title>
+<meta name="description" content="Consultas, vacinas, exames, microchipagem, medicação e curativos para cães e gatos. Consultório na Itoupava Central e atendimento domiciliar em Blumenau. Agende pelo WhatsApp.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VeterinaryCare","name":"Blubichos Pet Shop | Consultório Veterinário","image":"assets/hero-dog.png","telephone":"+55 47 99282-6061","address":{"@type":"PostalAddress","streetAddress":"Rua Gustavo Zimmermann, 5311, sala 01","addressLocality":"Blumenau","addressRegion":"SC","postalCode":"89063-001","addressCountry":"BR"},"areaServed":"Blumenau","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","bestRating":"5","reviewCount":"25"}}</script>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;overflow-x:hidden;max-width:100%;background:#FFF8E9;color:#16295E;font-family:'Nunito Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;touch-action:pan-y}
+html{scroll-behavior:smooth}
+a{color:#16295E;text-decoration:none}
+a:hover{color:#0E1C45}
+h1,h2,h3,p{margin:0}
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden;position:relative">
+
+<header style="position:sticky;top:0;z-index:50;background:#FFF8E9;height:76px;display:flex;align-items:center">
+  <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="#inicio" aria-label="Blubichos, página inicial" style="display:flex;align-items:center;gap:10px">
+      <svg width="34" height="34" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#16295E"></circle><ellipse cx="40" cy="49" rx="12" ry="10" fill="#7FDBDF"></ellipse><circle cx="25" cy="35" r="5" fill="#7FDBDF"></circle><circle cx="34" cy="27" r="5" fill="#7FDBDF"></circle><circle cx="46" cy="27" r="5" fill="#7FDBDF"></circle><circle cx="55" cy="35" r="5" fill="#7FDBDF"></circle></svg>
+      <span style="display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:'Lilita One',sans-serif;font-size:26px;color:#16295E;letter-spacing:0.3px">Blubichos</span>
+        <span style="font-size:10.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#16295E;opacity:0.75;margin-top:3px;white-space:nowrap">Consultório Veterinário</span>
+      </span>
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex;align-items:center;gap:30px;font-size:14.5px;font-weight:700">
+        <a href="#atendimento" style="color:#16295E">Atendimento</a>
+        <a href="#sobre" style="color:#16295E">Sobre</a>
+        <a href="#planos" style="color:#16295E">Planos</a>
+        <a href="#duvidas" style="color:#16295E">Dúvidas</a>
+        <a href="#contato" style="color:#16295E">Contato</a>
+        <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;background:#16295E;color:#FFF8E9;padding:12px 22px;border-radius:999px;font-weight:700" style-hover="background:#0E1C45;color:#FFF8E9">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+          Agendar
+        </a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ openMenu }}" aria-label="Abrir menu" aria-expanded="{{ menuOpen }}" style="width:44px;height:44px;border:none;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0">
+        <span style="width:24px;height:2.5px;background:#16295E;border-radius:2px;display:block"></span>
+        <span style="width:24px;height:2.5px;background:#16295E;border-radius:2px;display:block"></span>
+        <span style="width:16px;height:2.5px;background:#16295E;border-radius:2px;display:block;align-self:center;margin-left:8px"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Menu" style="position:fixed;inset:0;z-index:100;background:#16295E;color:#FFF8E9;display:flex;flex-direction:column;padding:20px 24px 32px;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='%23FFF8E9' fill-opacity='0.08'%3E%3Cellipse cx='48' cy='56' rx='11' ry='9'/%3E%3Ccircle cx='34' cy='42' r='4.5'/%3E%3Ccircle cx='43' cy='35' r='4.5'/%3E%3Ccircle cx='53' cy='35' r='4.5'/%3E%3Ccircle cx='62' cy='42' r='4.5'/%3E%3C/g%3E%3C/svg%3E&quot;)">
+    <div style="display:flex;justify-content:space-between;align-items:center;height:36px">
+      <span style="font-family:'Lilita One',sans-serif;font-size:26px">Blubichos</span>
+      <button type="button" onClick="{{ closeMenu }}" aria-label="Fechar menu" style="width:44px;height:44px;border:none;background:transparent;color:#FFF8E9;font-size:34px;line-height:1;cursor:pointer;font-family:'Nunito Sans',sans-serif">×</button>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:4px;margin-top:40px">
+      <a href="#atendimento" onClick="{{ closeMenu }}" style="font-family:'Lilita One',sans-serif;font-size:38px;color:#FFF8E9;padding:8px 0">Atendimento</a>
+      <a href="#sobre" onClick="{{ closeMenu }}" style="font-family:'Lilita One',sans-serif;font-size:38px;color:#FFF8E9;padding:8px 0">Sobre</a>
+      <a href="#planos" onClick="{{ closeMenu }}" style="font-family:'Lilita One',sans-serif;font-size:38px;color:#FFF8E9;padding:8px 0">Planos</a>
+      <a href="#duvidas" onClick="{{ closeMenu }}" style="font-family:'Lilita One',sans-serif;font-size:38px;color:#FFF8E9;padding:8px 0">Dúvidas</a>
+      <a href="#contato" onClick="{{ closeMenu }}" style="font-family:'Lilita One',sans-serif;font-size:38px;color:#FFF8E9;padding:8px 0">Contato</a>
+    </nav>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:18px">
+      <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#FFA91F;color:#16295E;height:52px;border-radius:999px;font-weight:800;font-size:16px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        Agende um horário
+      </a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram da Blubichos" style="align-self:center;width:48px;height:48px;border-radius:999px;border:2px solid #FFF8E9;color:#FFF8E9;display:flex;align-items:center;justify-content:center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+      </a>
+    </div>
+  </div>
+</sc-if>
+
+<main>
+<section id="inicio" ref="{{ heroRef }}" data-screen-label="Hero" style="position:relative;background:#7FDBDF;overflow:hidden">
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;min-height:clamp(560px,46vw,720px);display:flex;align-items:center">
+      <img src="assets/hero-dog.png" alt="Cachorro tricolor sorridente olhando para a câmera sobre fundo turquesa" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 28%;display:block">
+      <div style="position:relative;width:100%;max-width:1240px;margin:0 auto;padding:40px clamp(20px,4vw,40px) 90px">
+        <div style="max-width:min(520px,42vw);display:flex;flex-direction:column;gap:22px">
+          <p style="font-size:13px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#16295E">Itoupava Central · Blumenau</p>
+          <h1 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(48px,5.2vw,72px);line-height:0.98;color:#16295E;text-wrap:balance">Consultório veterinário para o seu melhor amigo</h1>
+          <p style="font-size:clamp(16px,1.3vw,19px);line-height:1.5;color:#16295E;max-width:440px;text-wrap:pretty">Cuidamos de cães e gatos aqui no consultório ou na sua casa, com atendimento domiciliar em Blumenau.</p>
+          <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:#FFA91F;color:#16295E;height:50px;padding:0 28px;border-radius:999px;font-weight:800;font-size:16px;box-shadow:4px 5px 0 #16295E;margin-top:6px" style-hover="box-shadow:2px 3px 0 #16295E;transform:translate(2px,2px);color:#16295E">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+            Agende um horário
+          </a>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:36px 22px 0;gap:18px">
+      <h1 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(38px,10.5vw,48px);line-height:1;color:#16295E;text-wrap:balance">Consultório veterinário para o seu melhor amigo</h1>
+      <p style="font-size:16px;line-height:1.5;color:#16295E;max-width:340px">Cães e gatos no consultório ou na sua casa, com atendimento domiciliar em Blumenau.</p>
+      <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#FFA91F;color:#16295E;height:50px;padding:0 26px;border-radius:999px;font-weight:800;font-size:16px;box-shadow:4px 5px 0 #16295E;margin-top:4px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        Agende um horário
+      </a>
+      <div style="width:calc(100% + 44px);aspect-ratio:1/1;max-height:min(560px,70vh);margin-top:10px;overflow:hidden;background:#7FDBDF">
+        <img src="assets/hero-dog.png" alt="Cachorro tricolor sorridente olhando para a câmera sobre fundo turquesa" style="width:100%;height:100%;object-fit:cover;object-position:80% 40%;display:block">
+      </div>
+    </div>
+  </sc-if>
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:0;bottom:-1px;width:100%;height:clamp(36px,5vw,70px);display:block"><path d="M0,48 C220,86 420,10 720,34 C1010,58 1200,6 1440,36 L1440,80 L0,80 Z" fill="#16295E"></path></svg>
+</section>
+
+<section aria-label="Destaques" data-screen-label="Credibilidade" style="background:#16295E;color:#FFF8E9;padding:clamp(28px,4vw,40px) 0 clamp(40px,5vw,56px)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0">
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;padding:18px 20px">
+      <span style="font-family:'Lilita One',sans-serif;font-size:clamp(44px,4.5vw,58px);line-height:1;color:#7FDBDF">4,8</span>
+      <span style="display:flex;flex-direction:column;gap:4px">
+        <span style="display:flex;gap:2px;color:#FFA91F">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+        </span>
+        <span style="font-size:14px;font-weight:600;line-height:1.3">nota no Google</span>
+      </span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;padding:18px 20px;border-left:1px solid rgba(255,248,233,0.18)">
+      <span style="font-family:'Lilita One',sans-serif;font-size:clamp(44px,4.5vw,58px);line-height:1;color:#7FDBDF">25</span>
+      <span style="font-size:14px;font-weight:600;line-height:1.3">avaliações de<br>tutores no Google</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:16px;padding:18px 20px;border-left:1px solid rgba(255,248,233,0.18)">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#7FDBDF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-7 9 7v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"></path><path d="M12 17.5s-3.5-2.2-3.5-4.5a1.9 1.9 0 0 1 3.5-1 1.9 1.9 0 0 1 3.5 1c0 2.3-3.5 4.5-3.5 4.5z"></path></svg>
+      <span style="font-size:14px;font-weight:600;line-height:1.3">Consultório e atendimento<br>domiciliar em Blumenau</span>
+    </div>
+  </div>
+</section>
+<svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(24px,3.5vw,50px);background:#FFF8E9;margin-top:-1px"><path d="M0,0 L1440,0 L1440,22 C1180,56 900,8 640,30 C400,50 200,20 0,34 Z" fill="#16295E"></path></svg>
+
+<section aria-labelledby="avaliacoes-titulo" data-screen-label="Avaliações" style="padding:clamp(48px,7vw,88px) 0 clamp(56px,7vw,96px)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px)">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center;margin-bottom:clamp(32px,4vw,48px)">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;opacity:0.7">Avaliações no Google</p>
+      <h2 id="avaliacoes-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02;text-wrap:balance">Quem já passou por aqui</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;align-items:start">
+      <figure style="margin:0;background:#FFFFFF;border:2px solid #16295E;border-radius:12px;padding:28px 26px;display:flex;flex-direction:column;gap:18px">
+        <span aria-hidden="true" style="font-family:'Lilita One',sans-serif;font-size:64px;line-height:0.6;color:#7FDBDF;height:30px">“</span>
+        <blockquote style="margin:0;font-size:16.5px;line-height:1.55;text-wrap:pretty">adorei, chegou muito cheiroso em casa, com certeza vou levar mais vezes🙏🏻🩷 …</blockquote>
+        <figcaption style="font-weight:800;font-size:15px">Renan Faria</figcaption>
+      </figure>
+      <figure style="margin:0;background:#7FDBDF;border:2px solid #16295E;border-radius:12px;padding:28px 26px;display:flex;flex-direction:column;gap:18px">
+        <span aria-hidden="true" style="font-family:'Lilita One',sans-serif;font-size:64px;line-height:0.6;color:#16295E;height:30px">“</span>
+        <blockquote style="margin:0;font-family:'Lilita One',sans-serif;font-size:clamp(22px,2vw,26px);line-height:1.2;text-wrap:pretty">Amo esse cantinho.Minha Pet vacinava aí.Agora minha Cat vacina aí tbm!</blockquote>
+        <figcaption style="font-weight:800;font-size:15px">Valdevino Caron (Vino Caron)</figcaption>
+      </figure>
+      <figure style="margin:0;background:#FFFFFF;border:2px solid #16295E;border-radius:12px;padding:28px 26px;display:flex;flex-direction:column;gap:18px">
+        <span aria-hidden="true" style="font-family:'Lilita One',sans-serif;font-size:64px;line-height:0.6;color:#7FDBDF;height:30px">“</span>
+        <blockquote style="margin:0;font-size:16.5px;line-height:1.55;text-wrap:pretty">Excelente PetShop. Ótimos preços. Médica Veterinária que esclarece as dúvidas e é atenciosa. Preço super acessível. Muito bem organizado nos itens. Possui remédios pra pronto atender seu bichinho. Sensacional. 😍😍😍😍 …</blockquote>
+        <figcaption style="font-weight:800;font-size:15px">João P. Cipriani</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" aria-labelledby="sobre-titulo" data-screen-label="Sobre" style="scroll-margin-top:76px;padding:0 0 clamp(64px,8vw,104px)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:stretch">
+    <div style="flex:1.2 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px;justify-content:center">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;opacity:0.7">Sobre a Blubichos</p>
+      <h2 id="sobre-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02;text-wrap:balance">Um cantinho de cuidado na Itoupava Central desde 2021</h2>
+      <p style="font-size:16.5px;line-height:1.65;max-width:560px;text-wrap:pretty">A Blubichos abriu as portas em setembro de 2021, na Rua Gustavo Zimmermann, e foi virando parte da rotina de muitos tutores do bairro. Teve cachorro que fez todas as vacinas aqui e hoje divide a agenda com o gato da casa.</p>
+      <p style="font-size:16.5px;line-height:1.65;max-width:560px;text-wrap:pretty">Em 2026 a gente reduziu a loja para colocar toda a energia no que mais importa: a saúde e o bem-estar do seu pet, no consultório veterinário e em casa.</p>
+    </div>
+    <div style="flex:1 1 340px;min-width:0;background:#16295E;color:#FFF8E9;border-radius:20px;padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:20px;justify-content:space-between;box-shadow:6px 7px 0 #7FDBDF;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='%237FDBDF' fill-opacity='0.12'%3E%3Cellipse cx='48' cy='56' rx='11' ry='9'/%3E%3Ccircle cx='34' cy='42' r='4.5'/%3E%3Ccircle cx='43' cy='35' r='4.5'/%3E%3Ccircle cx='53' cy='35' r='4.5'/%3E%3Ccircle cx='62' cy='42' r='4.5'/%3E%3C/g%3E%3C/svg%3E&quot;)">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#7FDBDF">Quem cuida do seu pet</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(30px,3vw,38px);line-height:1.02">Thaina Heloisa Budal</h3>
+        <p style="font-size:15px;font-weight:700;color:#7FDBDF">Médica veterinária e responsável pela Blubichos</p>
+        <p style="font-size:16px;line-height:1.6;text-wrap:pretty">É a Thaina quem conduz os atendimentos, no consultório e nas visitas em casa. Ela explica cada passo com calma e tira as dúvidas do tutor, do jeito que quem já passou por aqui conhece.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(28px,4vw,60px);margin-bottom:-1px"><path d="M0,40 C260,0 520,64 780,38 C1040,12 1240,60 1440,30 L1440,70 L0,70 Z" fill="#7FDBDF"></path></svg>
+<section id="atendimento" aria-labelledby="atendimento-titulo" data-screen-label="Atendimento" style="scroll-margin-top:76px;background:#7FDBDF;padding:clamp(40px,6vw,72px) 0 clamp(56px,7vw,96px)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px)">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:12px;align-items:center;margin-bottom:clamp(32px,4vw,48px)">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase">Atendimento veterinário</p>
+      <h2 id="atendimento-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02;text-wrap:balance">Cuidado para cães e gatos</h2>
+      <p style="font-size:16.5px;line-height:1.55;max-width:560px;text-wrap:pretty">Consultas, vacinas, exames e outros procedimentos, feitos no consultório ou na sua casa.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px">
+      <div style="background:#FFF8E9;border:2px solid #16295E;border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05">Consultas</h3>
+        <p style="font-size:15.5px;line-height:1.55">Avaliação do seu pet com tempo para ouvir você e explicar tudo com calma.</p>
+      </div>
+      <div style="background:#FFF8E9;border:2px solid #16295E;border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><path d="M12 8v8M8 12h8"></path></svg>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05">Vacinas</h3>
+        <p style="font-size:15.5px;line-height:1.55">Vacinação de cães e gatos para manter a proteção do seu pet em dia.</p>
+      </div>
+      <div style="background:#FFF8E9;border:2px solid #16295E;border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></svg>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05">Exames</h3>
+        <p style="font-size:15.5px;line-height:1.55">Exames para acompanhar a saúde do pet e ajudar no diagnóstico.</p>
+      </div>
+      <div style="background:#FFF8E9;border:2px solid #16295E;border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9.5 2.5v3.5M14.5 2.5v3.5M9.5 18v3.5M14.5 18v3.5M2.5 9.5h3.5M2.5 14.5h3.5M18 9.5h3.5M18 14.5h3.5"></path></svg>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05">Microchipagem</h3>
+        <p style="font-size:15.5px;line-height:1.55">Identificação permanente do seu pet com microchip.</p>
+      </div>
+      <div style="background:#FFF8E9;border:2px solid #16295E;border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(-45 12 12)"><rect x="2.5" y="8" width="19" height="8" rx="4"></rect><path d="M12 8v8"></path></g></svg>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05">Medicação</h3>
+        <p style="font-size:15.5px;line-height:1.55">Aplicação de medicação e medicamentos pet à disposição para o tratamento.</p>
+      </div>
+      <div style="background:#FFF8E9;border:2px solid #16295E;border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(45 12 12)"><rect x="2.5" y="8" width="19" height="8" rx="4"></rect><rect x="9" y="8" width="6" height="8"></rect></g></svg>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05">Curativos</h3>
+        <p style="font-size:15.5px;line-height:1.55">Limpeza e cuidado de machucados com todo o carinho que o momento pede.</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;margin-top:20px">
+      <div style="background:#16295E;color:#FFF8E9;border-radius:16px;padding:30px 28px;display:flex;gap:20px;align-items:flex-start">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#7FDBDF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:28px;line-height:1.05">No consultório</h3>
+          <p style="font-size:15.5px;line-height:1.55">Rua Gustavo Zimmermann, nº 5311, sala 01, Itoupava Central. Pertinho para quem mora no bairro.</p>
+        </div>
+      </div>
+      <div style="background:#16295E;color:#FFF8E9;border-radius:16px;padding:30px 28px;display:flex;gap:20px;align-items:flex-start">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#7FDBDF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M3 10l9-7 9 7v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"></path><path d="M9.5 21.5v-7h5v7"></path></svg>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:28px;line-height:1.05">Em domicílio</h3>
+          <p style="font-size:15.5px;line-height:1.55">A gente vai até a sua casa, em Blumenau, com agendamento prévio. Menos estresse para o pet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(28px,4vw,60px);background:#16295E;margin-top:-1px"><path d="M0,0 L1440,0 L1440,30 C1200,70 980,10 720,36 C460,62 240,14 0,42 Z" fill="#7FDBDF"></path></svg>
+
+<section id="planos" aria-labelledby="planos-titulo" data-screen-label="Planos" style="scroll-margin-top:76px;background:#16295E;color:#FFF8E9;padding:clamp(48px,6vw,80px) 0 clamp(56px,7vw,96px);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='%237FDBDF' fill-opacity='0.14'%3E%3Cellipse cx='40' cy='50' rx='11' ry='9'/%3E%3Ccircle cx='26' cy='36' r='4.5'/%3E%3Ccircle cx='35' cy='29' r='4.5'/%3E%3Ccircle cx='45' cy='29' r='4.5'/%3E%3Ccircle cx='54' cy='36' r='4.5'/%3E%3C/g%3E%3C/svg%3E&quot;)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:center">
+    <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#7FDBDF">Planos e parceiros</p>
+      <h2 id="planos-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02;text-wrap:balance">Quem caminha junto com a Blubichos</h2>
+      <p style="font-size:16.5px;line-height:1.6;max-width:460px;text-wrap:pretty">Trabalhamos com estes planos e parceiros para facilitar a rotina de cuidado. Quer saber como funciona para o seu pet? Chama a gente no WhatsApp.</p>
+    </div>
+    <ul style="flex:1.4 1 420px;min-width:0;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));border-top:1px solid rgba(127,219,223,0.35);border-left:1px solid rgba(127,219,223,0.35)">
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">Petlove</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">PlanVET</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">EthernosPet Crematório</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">Boa Vida Pet</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">Pet Life</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">Dog Life</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">Cat Life</li>
+      <li style="font-family:'Lilita One',sans-serif;font-size:24px;padding:26px 22px;border-right:1px solid rgba(127,219,223,0.35);border-bottom:1px solid rgba(127,219,223,0.35)">Meu + Pet</li>
+    </ul>
+  </div>
+</section>
+<svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(24px,3.5vw,50px);margin-top:-1px"><path d="M0,0 L1440,0 L1440,26 C1160,60 900,6 620,32 C380,54 180,18 0,36 Z" fill="#16295E"></path></svg>
+
+<section aria-labelledby="como-titulo" data-screen-label="Como funciona" style="padding:clamp(48px,6vw,80px) 0 clamp(56px,7vw,96px)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px)">
+    <div style="text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center;margin-bottom:clamp(36px,4vw,56px)">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;opacity:0.7">Três passos e pronto</p>
+      <h2 id="como-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02">Como funciona</h2>
+    </div>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(28px,3vw,40px)">
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px">
+        <span style="width:72px;height:72px;border-radius:999px;background:#7FDBDF;border:2px solid #16295E;display:flex;align-items:center;justify-content:center;font-family:'Lilita One',sans-serif;font-size:34px;box-shadow:4px 4px 0 #16295E">1</span>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05;margin-top:6px">Escolha o atendimento</h3>
+        <p style="font-size:15.5px;line-height:1.55;max-width:300px">No consultório, na Itoupava Central, ou em domicílio, aqui em Blumenau.</p>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px">
+        <span style="width:72px;height:72px;border-radius:999px;background:#7FDBDF;border:2px solid #16295E;display:flex;align-items:center;justify-content:center;font-family:'Lilita One',sans-serif;font-size:34px;box-shadow:4px 4px 0 #16295E">2</span>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05;margin-top:6px">Chame no WhatsApp</h3>
+        <p style="font-size:15.5px;line-height:1.55;max-width:300px">Mande uma mensagem contando do seu pet e pedindo um horário.</p>
+      </li>
+      <li style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px">
+        <span style="width:72px;height:72px;border-radius:999px;background:#7FDBDF;border:2px solid #16295E;display:flex;align-items:center;justify-content:center;font-family:'Lilita One',sans-serif;font-size:34px;box-shadow:4px 4px 0 #16295E">3</span>
+        <h3 style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:26px;line-height:1.05;margin-top:6px">Combine o atendimento</h3>
+        <p style="font-size:15.5px;line-height:1.55;max-width:300px">A gente acerta o dia e o horário com você e cuida do seu melhor amigo.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(28px,4vw,60px);margin-bottom:-1px"><path d="M0,34 C240,64 520,4 800,30 C1060,54 1260,12 1440,38 L1440,70 L0,70 Z" fill="#7FDBDF"></path></svg>
+<section id="duvidas" aria-labelledby="duvidas-titulo" data-screen-label="FAQ" style="scroll-margin-top:76px;background:#7FDBDF;padding:clamp(40px,6vw,72px) 0 clamp(56px,7vw,96px)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:flex-start">
+    <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase">Dúvidas frequentes</p>
+      <h2 id="duvidas-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02;text-wrap:balance">Ficou com alguma dúvida?</h2>
+      <p style="font-size:16.5px;line-height:1.6;max-width:380px">Separamos as perguntas que mais aparecem. Se a sua não estiver aqui, é só chamar.</p>
+      <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" style="align-self:flex-start;display:flex;align-items:center;gap:9px;background:#16295E;color:#FFF8E9;height:46px;padding:0 22px;border-radius:999px;font-weight:700;font-size:15px;margin-top:6px" style-hover="background:#0E1C45;color:#FFF8E9">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        Tirar dúvida no WhatsApp
+      </a>
+    </div>
+    <div style="flex:1.5 1 440px;min-width:0;background:#FFF8E9;border:2px solid #16295E;border-radius:18px;padding:6px clamp(18px,3vw,32px)">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+        <div style="border-bottom:{{ f.border }}">
+          <button type="button" onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="width:100%;background:transparent;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;text-align:left;font-family:'Nunito Sans',sans-serif;font-size:17px;font-weight:800;color:#16295E">
+            <span>{{ f.q }}</span>
+            <span aria-hidden="true" style="flex-shrink:0;width:30px;height:30px;border-radius:999px;background:#7FDBDF;display:flex;align-items:center;justify-content:center;transition:transform .2s;transform:{{ f.rot }}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16295E" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+            </span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size:15.5px;line-height:1.6;padding:0 46px 22px 0;text-wrap:pretty">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+<svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:clamp(28px,4vw,60px);background:#16295E;margin-top:-1px"><path d="M0,0 L1440,0 L1440,34 C1180,66 940,8 700,34 C460,60 220,10 0,40 Z" fill="#7FDBDF"></path></svg>
+
+<section id="contato" aria-labelledby="contato-titulo" data-screen-label="Contato" style="scroll-margin-top:76px;background:#16295E;color:#FFF8E9;padding:clamp(40px,6vw,72px) 0 0;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='%237FDBDF' fill-opacity='0.14'%3E%3Cellipse cx='40' cy='50' rx='11' ry='9'/%3E%3Ccircle cx='26' cy='36' r='4.5'/%3E%3Ccircle cx='35' cy='29' r='4.5'/%3E%3Ccircle cx='45' cy='29' r='4.5'/%3E%3Ccircle cx='54' cy='36' r='4.5'/%3E%3C/g%3E%3C/svg%3E&quot;)">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px)">
+    <div style="max-width:720px;margin:0 auto;background:#FFF8E9;color:#16295E;border-radius:20px;box-shadow:8px 9px 0 #0B1638;padding:clamp(30px,5vw,52px) clamp(22px,5vw,52px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px">
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:center">
+        <p style="font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;opacity:0.7">Localização e contato</p>
+        <h2 id="contato-titulo" style="font-family:'Lilita One',sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:1.02;text-wrap:balance">Vamos cuidar do seu pet?</h2>
+      </div>
+      <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;text-align:left">
+        <div style="background:#FFFFFF;border:1.5px solid #E8DEC6;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px">
+          <p style="font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;opacity:0.7">Endereço</p>
+          <address style="font-style:normal;font-size:15.5px;line-height:1.55;font-weight:600">Rua Gustavo Zimmermann, nº 5311, sala 01<br>Itoupava Central, Blumenau, SC<br>CEP 89063-001</address>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Gustavo+Zimmermann+5311+Itoupava+Central+Blumenau" target="_blank" rel="noopener" style="font-size:14.5px;font-weight:800;text-decoration:underline;text-underline-offset:3px;margin-top:2px">Como chegar</a>
+        </div>
+        <div style="background:#FFFFFF;border:1.5px solid #E8DEC6;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px">
+          <p style="font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;opacity:0.7">Horário</p>
+          <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15.5px;line-height:1.4">
+            <dt style="font-weight:600">Seg a sex</dt><dd style="margin:0;font-weight:800">09:30 às 18:30</dd>
+            <dt style="font-weight:600">Sábado</dt><dd style="margin:0;font-weight:800">08:00 às 12:00</dd>
+            <dt style="font-weight:600">Domingo</dt><dd style="margin:0;font-weight:800">Fechado</dd>
+          </dl>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center">
+        <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;background:#FFA91F;color:#16295E;height:50px;padding:0 28px;border-radius:999px;font-weight:800;font-size:16px;box-shadow:4px 5px 0 #16295E" style-hover="box-shadow:2px 3px 0 #16295E;transform:translate(2px,2px);color:#16295E">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+          Agende um horário
+        </a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram da Blubichos" style="width:50px;height:50px;border-radius:999px;border:2px solid #16295E;color:#16295E;display:flex;align-items:center;justify-content:center" style-hover="background:#7FDBDF;color:#16295E">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(20px,4vw,40px) 32px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+      <a href="#inicio" aria-label="Voltar ao topo" style="display:flex;align-items:center;gap:10px;color:#FFF8E9">
+        <svg width="34" height="34" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="40" fill="#7FDBDF"></circle><ellipse cx="40" cy="49" rx="12" ry="10" fill="#16295E"></ellipse><circle cx="25" cy="35" r="5" fill="#16295E"></circle><circle cx="34" cy="27" r="5" fill="#16295E"></circle><circle cx="46" cy="27" r="5" fill="#16295E"></circle><circle cx="55" cy="35" r="5" fill="#16295E"></circle></svg>
+        <span style="font-family:'Lilita One',sans-serif;font-size:26px">Blubichos</span>
+      </a>
+      <nav aria-label="Rodapé" style="display:flex;flex-wrap:wrap;gap:22px;font-size:14px;font-weight:700">
+        <a href="#atendimento" style="color:#FFF8E9">Atendimento</a>
+        <a href="#sobre" style="color:#FFF8E9">Sobre</a>
+        <a href="#planos" style="color:#FFF8E9">Planos</a>
+        <a href="#duvidas" style="color:#FFF8E9">Dúvidas</a>
+      </nav>
+      <div style="display:flex;gap:10px">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" style="width:42px;height:42px;border-radius:999px;background:#FFF8E9;color:#16295E;display:flex;align-items:center;justify-content:center">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+        <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" aria-label="WhatsApp" style="width:42px;height:42px;border-radius:999px;background:#FFF8E9;color:#16295E;display:flex;align-items:center;justify-content:center">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <p style="font-size:12.5px;opacity:0.75;border-top:1px solid rgba(255,248,233,0.18);padding-top:20px;padding-bottom:{{ footerPad }}">© 2026 Blubichos Pet Shop LTDA · CNPJ 43.618.626/0001-79</p>
+  </footer>
+</section>
+</main>
+
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp" style="position:fixed;right:28px;bottom:28px;z-index:40;width:60px;height:60px;border-radius:999px;background:#FFA91F;color:#16295E;border:2px solid #16295E;box-shadow:4px 5px 0 #16295E;display:flex;align-items:center;justify-content:center" style-hover="transform:translate(2px,2px);box-shadow:2px 3px 0 #16295E;color:#16295E">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+  </a>
+</sc-if>
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+  <a href="https://wa.me/5547992754013?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20meu%20pet." target="_blank" rel="noopener" aria-hidden="{{ ctaHidden }}" tabIndex="{{ ctaTab }}" style="position:fixed;left:16px;right:16px;bottom:16px;z-index:40;height:54px;border-radius:999px;background:#FFA91F;color:#16295E;border:2px solid #16295E;box-shadow:3px 4px 0 #16295E;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:16px;transition:transform .3s ease, opacity .3s ease;transform:{{ ctaTransform }};opacity:{{ ctaOpacity }};pointer-events:{{ ctaPointer }}">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+    Agende um horário
+  </a>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: typeof window !== 'undefined' && window.innerWidth < 960, menuOpen: false, heroVisible: true, open: 0 };
+  heroRef = React.createRef();
+  faqData = [
+    { q: 'Onde fica a Blubichos?', a: 'Na Rua Gustavo Zimmermann, nº 5311, sala 01, na Itoupava Central, em Blumenau, SC.' },
+    { q: 'Vocês atendem em casa?', a: 'Sim. Fazemos atendimento domiciliar em Blumenau, sempre com agendamento prévio pelo WhatsApp.' },
+    { q: 'Atendem cães e gatos?', a: 'Sim, o atendimento veterinário da Blubichos é para cães e gatos.' },
+    { q: 'Quais serviços veterinários vocês fazem?', a: 'Consultas, vacinas, exames, microchipagem, medicação, curativos e outros procedimentos. Para saber se o que o seu pet precisa está entre eles, chama a gente no WhatsApp.' },
+    { q: 'Com quais planos e parceiros vocês trabalham?', a: 'Petlove, PlanVET, EthernosPet Crematório, Boa Vida Pet, Pet Life, Dog Life, Cat Life e Meu + Pet. Para entender como cada um funciona no atendimento do seu pet, fale com a gente.' },
+    { q: 'Qual é o horário de atendimento?', a: 'Segunda a sexta, das 09:30 às 18:30. Sábado, das 08:00 às 12:00. Domingo fechado.' },
+    { q: 'A Blubichos ainda é pet shop?', a: 'Em abril de 2026 reduzimos a operação de loja para focar no atendimento veterinário. Seguimos com medicamentos pet disponíveis.' }
+  ];
+  componentDidMount() {
+    this.onResize = () => { const m = window.innerWidth < 960; if (m !== this.state.isMobile) this.setState({ isMobile: m, menuOpen: false }); };
+    window.addEventListener('resize', this.onResize);
+    this.io = new IntersectionObserver(([e]) => { if (e.isIntersecting !== this.state.heroVisible) this.setState({ heroVisible: e.isIntersecting }); }, { rootMargin: '-76px 0px 0px 0px', threshold: 0 });
+    this.attach();
+  }
+  componentDidUpdate() { this.attach(); }
+  attach() { const el = this.heroRef.current; if (el && el !== this.observed && this.io) { if (this.observed) this.io.unobserve(this.observed); this.io.observe(el); this.observed = el; } }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); this.io && this.io.disconnect(); document.body.style.overflow = ''; }
+  setMenu(v) { document.body.style.overflow = v ? 'hidden' : ''; this.setState({ menuOpen: v }); }
+  renderVals() {
+    const { isMobile, menuOpen, heroVisible, open } = this.state;
+    const show = isMobile && !heroVisible && !menuOpen;
+    const n = this.faqData.length;
+    return {
+      isMobile, isDesktop: !isMobile, menuOpen,
+      heroRef: this.heroRef,
+      openMenu: () => this.setMenu(true),
+      closeMenu: () => this.setMenu(false),
+      ctaTransform: show ? 'translateY(0)' : 'translateY(140%)',
+      ctaOpacity: show ? 1 : 0,
+      ctaPointer: show ? 'auto' : 'none',
+      ctaHidden: show ? 'false' : 'true',
+      ctaTab: show ? 0 : -1,
+      footerPad: isMobile ? '84px' : '0px',
+      faqs: this.faqData.map((f, i) => ({
+        ...f, open: open === i,
+        rot: open === i ? 'rotate(45deg)' : 'rotate(0deg)',
+        border: i === n - 1 ? 'none' : '1.5px solid #E3D6B8',
+        toggle: () => this.setState({ open: open === i ? -1 : i })
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
